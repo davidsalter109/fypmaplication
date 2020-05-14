@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>My Maplication</title>
+      <script src="https://www.google.com/jsapi"></script>
+   <head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head> 
+<body>
+<script src="loc.js"></script>
+<div class="header">
+        <ul>
+            <li><input type ="button" id="recBtn" value="Start Recording" onclick="startRecording();" class="button"></li>
+            <li><input type ="button" id="stopBtn" value="Stop Recording" onclick="stopRecording();"class="button"></li>
+            <li><input type ="button" id="clearLine" value="Clear Travel Line" onclick="clearLine();"class="button"></li>
+            <li><input type ="button" id="addArray" value="Create Chart" onclick="getElevationCharts();"class="button"></li>
+            <li><input type ="button" id="clearMarkers" value="Remove Route Plan" onclick="clearMarker();"class="button"></li>
+            <li><label class="container"><input type="checkbox" id="bikeLayer" onclick="drawBikeLayer();"/>Bike Layer<span class="checkmark"></span></label></li>
+        </ul>
+</div>
+<div class="msg-box">
+     <div id="msg"></div>
+</div>  
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYDSuvT6woKVoRAX7-ZuDD6ZALocZcFu0&callback=showLocation"
+        src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCYDSuvT6woKVoRAX7-ZuDD6ZALocZcFu0"></script>
+<div id="map"></div>
+<div class="charts">
+    <h1>Recorded Elevation Chart</h1>
+        <div id="elevation_chart"></div>
+    <h1>Planned Route Elevation Chart</h1>
+        <div id="elevation_chart2"></div>
+</div>
+</body>
+</html>
